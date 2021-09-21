@@ -2,8 +2,10 @@ left = document.getElementById("3");
 right = document.getElementById("1");
 var blokada = false;
 var score = document.getElementById("score");
+var score2 = document.getElementById("n2");
 var wynik = 0;
 var czas = 100;
+var lock = false;
 odwroc();
 var bar = document.getElementById('bar');
 time();
@@ -42,7 +44,7 @@ function sound() {
 document.addEventListener("keypress", e => {
     console.log(e.key);
     var pole = document.getElementById("field");
-    if (e.key == "a") {
+    if (e.key == "a" && lock==false) {
         addtime();
         sound();
         const el = document.createElement("div");
@@ -50,7 +52,7 @@ document.addEventListener("keypress", e => {
         pole.appendChild(el);
         moveLeft();
     }
-    else if (e.key == "d") {
+    else if (e.key == "d" && lock==false) {
         addtime();
         sound();
         const el = document.createElement("div");
@@ -66,6 +68,8 @@ function moveLeft() {
 
     left.classList.add("man");
     right.classList.remove("man");
+    
+    sprawdz();
     down();
     sprawdz();
 }
@@ -74,6 +78,8 @@ function moveRight() {
     point();
     right.classList.add("man");
     left.classList.remove("man");
+    
+    sprawdz();
     down();
     sprawdz();
 }
@@ -130,12 +136,15 @@ function sprawdz() {
     if ((left.classList.item(0) == "man" || left.classList.item(1) == "man" || left.classList.item(2) == "man") && (left.classList.item(0) == "branch" || left.classList.item(1) == "branch" || left.classList.item(2) == "branch")) {
         gameover()
     }
-    if ((right.classList.item(0) == "man" || right.classList.item(1) == "man" || right.classList.item(2) == "man") && (right.classList.item(0) == "branch" || right.classList.item(1) == "branch" || right.classList.item(2) == "branch")) {
+    if ((right.classList.item(0) == "man" || right.classList.item(1) == "man" || right.classList.item(2) == "man") && (right.classList.item(0) == "branch" || right.classList.item(1) == "branch" || right.classList.item(2) == "branch" || right.classList.item(3) == "branch")) {
         gameover()
     }
 }
 
 function gameover() {
+    var window= document.getElementById("gg")
+    window.style.visibility="visible"
+    lock=true;
     console.log("Game Over!")
 }
 
@@ -147,10 +156,18 @@ function odwroc() {
         if (el.classList.item(0) == "branch" || el.classList.item(1) == "branch" || el.classList.item(2) == "branch" || el.classList.item(3) == "branch") {
 
             el.classList.add("branchR");
+           
         }
     }
 }
 function point() {
     wynik++
     score.innerText = "Score: " + wynik;
+    score2.innerText = "Score: " + wynik;
 }
+
+button = document.getElementById("n3");
+
+button.addEventListener("click",()=>{
+    window.location.reload(true);
+})

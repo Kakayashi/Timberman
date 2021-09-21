@@ -13,8 +13,8 @@ body {
 	margin-right: auto;
 	font-size: 40px;
 	height: 100px;
-	margin-top: 30px;
-	margin-bottom: -50px;
+	margin-top: 10px;
+	margin-bottom: -30px;
 }
 
 #score {
@@ -40,6 +40,9 @@ body {
 	height: 816px;
 	border: 2px solid black;
 	background-image: url("bg.png");
+	box-shadow: 0px 0px 0px 4px #000000, 0px 0px 0px 8px #4b4c4b,
+		0px 0px 0px 12px #828482, 0px 0px 0px 15px #b2b5b2, 0px 0px 0px 19px #daddda,
+		5px 5px 7px 5px rgba(0, 0, 0, 0);
 }
 #field {
 	margin-left: auto;
@@ -125,15 +128,42 @@ body {
 #bar {
 	width: 100%;
 	height: 100%;
-	background-color: darkgreen;
+	background-color: rgb(104, 211, 54);
 }
 
 #gg {
-	width: 1100px;
-	background-color: blueviolet;
+	width: 1200px;
+	background-color: rgb(116, 116, 116);
 	height: 400px;
-	position: fixed;
-
+	position: absolute;
+	top: 20vh;
+	left: 18.5vw;
+	box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #4b4c4b,
+		0px 0px 0px 24px #828482, 0px 0px 0px 31px #b2b5b2, 0px 0px 0px 39px #daddda,
+		5px 5px 15px 5px rgba(0, 0, 0, 0);
+	visibility: hidden;
+}
+#n1 {
+	text-align: center;
+	font-size: 90px;
+	margin-top: 30px;
+}
+#n2 {
+	text-align: center;
+	font-size: 50px;
+	margin-top: 30px;
+}
+#n3 {
+	text-align: center;
+	font-size: 40px;
+	margin-top: 90px;
+	width: 200px;
 	margin-left: auto;
 	margin-right: auto;
+	border: 2px solid black;
+	background-color: rgb(99, 98, 98);
+	cursor: pointer;
+}
+#n3:hover {
+	background-color: rgb(79, 171, 184);
 }
