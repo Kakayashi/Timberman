@@ -1,0 +1,139 @@
+* {
+	margin: 0;
+	font-family: "ZCOOL KuaiLe", cursive;
+}
+body {
+	background-color: #666;
+}
+
+#top {
+	color: aliceblue;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 40px;
+	height: 100px;
+	margin-top: 30px;
+	margin-bottom: -50px;
+}
+
+#score {
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 500px;
+}
+
+#time {
+	float: left;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#rectangle {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1004px;
+	height: 816px;
+	border: 2px solid black;
+	background-image: url("bg.png");
+}
+#field {
+	margin-left: auto;
+	margin-right: auto;
+	width: 306px;
+	height: 816px;
+}
+.p {
+	width: 102px;
+	height: 100px;
+	float: left;
+}
+
+.tree {
+	background-image: url("tree.png");
+}
+.branch {
+	background-image: url("branch.png");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.branchR {
+	transform: scaleX(-1);
+}
+
+.man {
+	background-image: url("man.gif");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position-y: 20px;
+}
+.animationR {
+	position: fixed;
+	left: 46%;
+	top: 85%;
+	animation: myAnim 1s ease 0s 1 normal forwards;
+}
+.animationL {
+	position: fixed;
+	left: 46%;
+	top: 85%;
+	animation: myAnimm 1s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 1;
+		transform: translateX(0) rotate(0deg);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(250px) rotate(200deg);
+	}
+}
+@keyframes myAnimm {
+	0% {
+		opacity: 1;
+		transform: translateX(0) rotate(0deg);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(-250px) rotate(-200deg);
+	}
+}
+/*
+#sky {
+	width: 1000px;
+	background-color: cornflowerblue;
+	height: 70%;
+	position: fixed;
+	z-index: 0dd;
+}
+*/
+#time {
+	margin-left: 100px;
+	margin-right: auto;
+	width: 200px;
+	height: 30px;
+	border: 2px solid black;
+}
+#bar {
+	width: 100%;
+	height: 100%;
+	background-color: darkgreen;
+}
+
+#gg {
+	width: 1100px;
+	background-color: blueviolet;
+	height: 400px;
+	position: fixed;
+
+	margin-left: auto;
+	margin-right: auto;
+}

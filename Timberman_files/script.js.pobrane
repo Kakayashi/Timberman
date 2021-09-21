@@ -1,0 +1,51 @@
+left = document.getElementById("3");
+right = document.getElementById("1");
+
+for (i = 23; i >= 2; i = i - 3) {
+    el = document.getElementById(i);
+    el.classList.add("tree");
+}
+
+document.addEventListener("keypress", e => {
+    if (e.key == "a") moveLeft();
+    else if (e.key == "d") moveRight();
+})
+
+function moveLeft() {
+    left.classList.add("man");
+    right.classList.remove("man");
+    down();
+}
+
+function moveRight() {
+    right.classList.add("man");
+    left.classList.remove("man");
+    down();
+}
+
+function down() {
+    for (i = 0; i < 7; i++) {
+        //console.log(i)
+        var k = 1 + i * 3;
+
+        var el1 = document.getElementById(k)
+        var el2 = document.getElementById(k + 1)
+        var el3 = document.getElementById(k + 2)
+        var el4 = document.getElementById(k + 3)
+        var el5 = document.getElementById(k + 4)
+        var el6 = document.getElementById(k + 5)
+
+        var k4 = el4.classList.item(0) + " " + (el4.classList.item(1) ? el4.classList.item(1) + " " : "") + (el4.classList.item(2) ? el4.classList.item(2) + " " : "");
+        var k5 = el5.classList;
+        var k6 = el6.classList;
+        console.log(k4);
+        el1.classList.remove("branch", "tree", "p");
+        el2.classList.remove("branch", "tree", "p");
+        el3.classList.remove("branch", "tree", "p");
+
+        el1.classList.add(k4);
+        el2.classList.add(k5);
+        el3.classList.add(k6);
+
+    }
+}

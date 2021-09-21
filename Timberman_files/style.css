@@ -1,0 +1,70 @@
+*{
+    background-color: #666;
+    margin: 0;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+#top{
+    color: aliceblue;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    height: 100px;
+    margin-top: 30px;
+    margin-bottom: -50px;
+
+}
+
+#score{
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 500px;
+}
+
+#time{
+    float: left;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#rectangle{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1004px;
+    height: 816px;
+    border: 2px solid black;
+}
+#field{
+    margin-left: auto;
+    margin-right: auto;
+    width: 306px;
+    height: 816px;
+    border: 1px solid black;
+}
+.p{
+    width: 100px;
+    height: 100px;
+    float: left;
+    border: 1px solid black;
+}
+
+.tree{
+    background-image: url("tree.png");
+}
+.branch{
+    background-image: url("branch.png");
+    background-attachment: fixed;
+    background-position: 50% 50%; 
+}
+.man{
+    background-image: url("man.gif");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 20px;
+    
+}
