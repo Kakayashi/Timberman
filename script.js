@@ -1,13 +1,13 @@
 left = document.getElementById("3");
 right = document.getElementById("1");
-var blokada = false;
-var score = document.getElementById("score");
-var score2 = document.getElementById("n2");
-var wynik = 0;
-var czas = 100;
-var lock = false;
+let blokada = false;
+let score = document.getElementById("score");
+let score2 = document.getElementById("n2");
+let wynik = 0;
+let czas = 100;
+let lock = false;
 odwroc();
-var bar = document.getElementById('bar');
+let bar = document.getElementById('bar');
 time();
 
 function time() {
@@ -36,14 +36,14 @@ for (i = 23; i >= 2; i = i - 3) {
 }
 
 function sound() {
-    var chop = document.createElement("audio");
+    let chop = document.createElement("audio");
     chop.src = "chop.mp3";
     chop.play();
 }
 
 document.addEventListener("keypress", e => {
     console.log(e.key);
-    var pole = document.getElementById("field");
+    let pole = document.getElementById("field");
     if (e.key == "a" && lock==false) {
         addtime();
         sound();
@@ -87,14 +87,14 @@ function moveRight() {
 function down() {
     for (i = 0; i < 7; i++) {
         //console.log(i)
-        var k = 1 + i * 3;
+        let k = 1 + i * 3;
 
-        var el1 = document.getElementById(k)
-        var el2 = document.getElementById(k + 1)
-        var el3 = document.getElementById(k + 2)
-        var el4 = document.getElementById(k + 3)
-        var el5 = document.getElementById(k + 4)
-        var el6 = document.getElementById(k + 5)
+        let el1 = document.getElementById(k)
+        let el2 = document.getElementById(k + 1)
+        let el3 = document.getElementById(k + 2)
+        let el4 = document.getElementById(k + 3)
+        let el5 = document.getElementById(k + 4)
+        let el6 = document.getElementById(k + 5)
 
         el1.classList.remove("branch", "tree");
         el3.classList.remove("branch", "tree");
@@ -110,13 +110,13 @@ function down() {
         }
 
     }
-    var el1 = document.getElementById(24);
-    var el2 = document.getElementById(22);
+    let el1 = document.getElementById(24);
+    let el2 = document.getElementById(22);
     el1.classList.remove("branch", "tree");
     el2.classList.remove("branch", "tree");
-    var x = Math.floor(Math.random() * 11);
+    let x = Math.floor(Math.random() * 11);
     if (x < 7 && blokada == false) {
-        var y = Math.floor(Math.random() * 11);
+        let y = Math.floor(Math.random() * 11);
         if (y < 5) {
             el1.classList.add("branch");
             blokada = true;
@@ -142,7 +142,7 @@ function sprawdz() {
 }
 
 function gameover() {
-    var window= document.getElementById("gg")
+    let window= document.getElementById("gg")
     window.style.visibility="visible"
     lock=true;
     console.log("Game Over!")
@@ -150,7 +150,7 @@ function gameover() {
 
 function odwroc() {
     for (i = 22; i >= 0; i = i - 3) {
-        var k = i;
+        let k = i;
         el = document.getElementById(k);
 
         if (el.classList.item(0) == "branch" || el.classList.item(1) == "branch" || el.classList.item(2) == "branch" || el.classList.item(3) == "branch") {
